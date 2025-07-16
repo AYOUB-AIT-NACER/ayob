@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ÉCOLE MASAR - Votre Avenir Commence Ici</title> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5; /* Light grey background */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Section */
+        .header-hero {
+            background-color: #0056b3; /* Darker blue for a professional look */
+            color: #ffffff;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            background-image: linear-gradient(135deg, #0056b3 0%, #007bff 100%); /* Gradient background */
+        }
+
+        .header-hero h1 {
+            font-family: 'Playfair Display', serif; /* Elegant font for the title */
+            font-size: 3.8em; /* Larger title */
+            margin-bottom: 10px;
+            letter-spacing: 1.5px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .header-hero p {
+            font-size: 1.4em; /* Larger slogan */
+            margin-top: 0;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            padding: 15px 0;
+            position: sticky; /* Makes nav stick to the top when scrolling */
+            top: 0;
+            z-index: 1000; /* Ensures nav is above other elements */
+        }
+
+        nav a {
+            display: inline-block;
+            color: #0056b3; /* Blue text for nav links */
+            text-align: center;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: all 0.3s ease; /* Smooth transition for hover effects */
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #e6f2ff; /* Light blue on hover */
+            color: #004085; /* Darker blue text on hover */
+            transform: translateY(-2px); /* Slight lift effect */
+        }
+
+        /* Main Content Sections */
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            color: #0056b3;
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #e0e6ed; /* Subtle bottom border */
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 5px;
+            background-color: #007bff; /* Accent color */
+            border-radius: 3px;
+        }
+
+        /* Image Placeholder */
+        .image-placeholder {
+            width: 100%;
+            height: 400px; /* Increased height for a more impactful image */
+            background-color: #e0e0e0; /* Grey background */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            font-style: italic;
+            font-size: 1.5em;
+            margin-bottom: 40px;
+            border-radius: 10px;
+            overflow: hidden; /* Ensures image fits within rounded corners */
+            box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.1);
+            background-image: url('https://via.placeholder.com/1200x400?text=Votre+Image+de+l%27%C3%89cole+Ici'); /* Placeholder image with text */
+            background-size: cover;
+            background-position: center;
+            color: transparent; /* Hide placeholder text if image is loaded */
+        }
+        /* If you load a real image, the placeholder background-image should be removed */
+        .image-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image covers the area without distortion */
+            border-radius: 10px;
+            display: block;
+        }
+
+
+        /* Text About the School */
+        .school-description {
+            font-size: 1.15em;
+            text-align: justify;
+            margin-bottom: 40px;
+            color: #555;
+        }
+
+        .school-description h3 {
+            font-family: 'Playfair Display', serif;
+            color: #0056b3;
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+        }
+
+        .school-description ul {
+            list-style: none; /* Remove default bullet points */
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .school-description ul li {
+            background: #e6f2ff; /* Light blue background for list items */
+            margin-bottom: 10px;
+            padding: 15px 20px;
+            border-left: 5px solid #007bff; /* Blue border on the left */
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+        }
+
+        .school-description ul li:hover {
+            transform: translateX(5px); /* Slight movement on hover */
+        }
+
+        .school-description ul li::before {
+            content: '✓'; /* Custom checkmark bullet */
+            color: #28a745; /* Green checkmark */
+            font-weight: bold;
+            margin-right: 15px;
+            font-size: 1.2em;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: #ffffff;
+            text-align: center;
+            padding: 25px 20px;
+            margin-top: 50px;
+            font-size: 0.9em;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-hero">
+        <h1>ÉCOLE AL MASAR</h1><img src="mas.jpeg"width="5%"height="5%">
+        <p>Un avenir brillant vous attend</p>
+    </div>
+	
+
+    <nav>
+	
+	<a href="diplomas.html"><font color ="RED">👈<U>VISIT MORE</U>👉</a></FONT>
+    </nav>
+
+    <div class="container">
+        <h2 class="section-title" id="apropos"> AL MASAR</h2>
+
+     <CENTER>   <img src="azer.jpeg"width="40%"height="40%"></CENTER>
+            </div>
+
+        <div class="school-description">
+            <p>
+               <LI> Bienvenue à *ÉCOLE MASAR*, votre partenaire de confiance pour un avenir professionnel réussi. Nous nous engageons à offrir une éducation de haute qualité, axée sur la pratique et les besoins du marché de l'emploi. Notre mission est de former des professionnels compétents, innovants et prêts à relever les défis de demain.
+            </p>
+            <p>
+                Chez ÉCOLE MASAR, nous croyons que l'apprentissage est une aventure continue. Nos programmes sont conçus pour développer non seulement les compétences techniques, mais aussi les qualités personnelles essentielles telles que la pensée critique, la résolution de problèmes.
+            </p></LI>
+
+           <center> <h1 id="formations"><font color ="#0000FF">Nos Domaines de Formation  :</h1></font></center>
+          <ul>
+                <li>
+                    <strong><font color ="#0000FF"> <u>INFERMIER AUXILIAIRE </u>  :</strong></font></li><li> Ce diplôme vous permet d'accéder rapidement au monde des soins de santé. Vous acquerrez des compétences pratiques essentielles pour assister
+les infirmiers et prendre soin des patients, souvent avec un contact humain privilégié. C'est une excellente porte d'entrée pour débuter une
+carrière dans le domaine médical et
+potentiellement évoluer.</li>
+               
+                <li>
+                    <strong><font color ="#0000FF"><u>GESTION INFORMATISÉ	</u>	:</strong> </font></li><li>Ce diplôme vous forme à l'utilisation et à la gestion des systèmes informatiques dans un contexte professionnel. Vous développerez des compétences clés en résolution de problèmes, en analyse de données et en automatisation, très recherchées dans tous les secteurs d'activité, de
+la finance à la santé.
+                </li>
+                <li>
+                    <strong><font color ="#0000FF"><u>GESTION D’ENTREPRISE	</u>	:</strong> </font></li><li>Un diplôme en gestion d'entreprise vous offre une
+vision globale du fonctionnement d'une organisation. Vous développerez des
+compétences stratégiques en finance, marketing, ressources humaines et leadership, ouvrant la porte à des postes à responsabilités et à la
+création de votre propre entreprise.
+                </li>
+				<li>
+                    <strong><font color ="#0000FF"><u>INFIRMIER POLYVALENT	</u>	:</strong></font> </li><li>Ce diplôme vous prépare à une pratique infirmière complète et diversifiée. Vous serez capable de prodiguer des soins à des patients de tout âge, d'évaluer leur état de santé et de gérer des situations cliniques variées, avec de nombreuses opportunités d'évolution et de spécialisation dans
+le secteur de la santé.
+                </li>
+            </ul>
+			  <center><img src="masar.jpeg"width="20%"height="20%"></CENTER>
+            <p>
+                Rejoignez ÉCOLE MASAR et construisez les fondations d'un avenir professionnel solide et prometteur. Votre succès est notre priorité !
+            </p>
+        </div>
+    </div>
+	
+
+    <footer class="footer">
+        <p>&copy; 2025 ÉCOLE MASAR. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>
